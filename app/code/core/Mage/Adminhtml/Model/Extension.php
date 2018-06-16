@@ -367,7 +367,7 @@ class Mage_Adminhtml_Model_Extension extends Varien_Object
         $result = $pear->run('info', $options, array($package));
         if ($result instanceof PEAR_Error) {
             Mage::throwException($result->message);
-            break;
+            //break; //won't be called anyway ^^
         }
 
         $output = $pear->getOutput();
@@ -386,7 +386,7 @@ class Mage_Adminhtml_Model_Extension extends Varien_Object
         $result = $pear->run('remote-info', $options, array($package));
         if ($result instanceof PEAR_Error) {
             Mage::throwException($result->message);
-            break;
+            //break; //won't be called anyway ^^
         }
 
         $output = $pear->getOutput();
