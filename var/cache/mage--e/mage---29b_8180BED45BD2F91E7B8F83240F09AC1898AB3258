@@ -1,0 +1,35 @@
+<div class="category-image">
+    <img src="http://m1.local.de/media/wysiwyg/Cataccessoriesmainimg.jpg" alt="Hold It - Jet setting just got easier with our innovative travel gear and accessories"/>
+</div>
+
+<ul class="catblocks">
+    <li>
+    <a href="http://m1.local.de/accessories/eyewear.html">
+        <img src="http://m1.local.de/media/wysiwyg/accessorieseyewearimg.jpg" alt="Eyewear" />
+        <span>Eyewear</span>
+    </a>
+    </li>
+    <li>
+        <a href="http://m1.local.de/accessories/jewelry.html">
+            <img src="http://m1.local.de/media/wysiwyg/acessoreiesjeweleryimg.jpg" alt="Jewelry" />
+            <span>Jewelry</span>
+        </a>
+    </li>
+    <li>
+        <a href="http://m1.local.de/accessories/shoes.html">
+            <img src="http://m1.local.de/media/wysiwyg/accessoriesshoesimg.jpg" alt="Shoes" />
+            <span>Shoes</span>
+        </a>
+    </li>
+    <li>
+        <a href="http://m1.local.de/accessories/bags-luggage.html">
+            <img src="http://m1.local.de/media/wysiwyg/Accessoriesbagimg.jpg" alt="Bags" />
+            <span>Bags & Luggage</span>
+        </a>
+    </li>
+</ul>
+
+<div class="catlandingbottomPromoblock">
+<p style="float: left;font-family: raleway;font-size: 24px;font-weight: bold;padding-top: 13px;padding-bottom: 13px;text-align: center;text-transform: uppercase;width: 100%;"><a style="color:#636363;text-decoration:none;" href="http://m1.local.de/accessories/shoes.html">50% OFF ALL SHOES!</a></p>
+</div>
+

@@ -1,0 +1,5 @@
+.vscode/**
+*.msbuildproject
+bin/**
+obj/**
+app/etc/local.xml

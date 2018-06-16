@@ -1,0 +1,26 @@
+<ul class="catblocks">
+    <li>
+    <a href="http://m1.local.de/accessories/eyewear.html">
+        <img src="http://m1.local.de/media/wysiwyg/accessorieseyewearimg.jpg" alt="Eyewear" />
+        <span>Eyewear</span>
+    </a>
+    </li>
+    <li>
+        <a href="http://m1.local.de/accessories/jewelry.html">
+            <img src="http://m1.local.de/media/wysiwyg/acessoreiesjeweleryimg.jpg" alt="Jewelry" />
+            <span>Jewelry</span>
+        </a>
+    </li>
+    <li>
+        <a href="http://m1.local.de/accessories/shoes.html">
+            <img src="http://m1.local.de/media/wysiwyg/accessoriesshoesimg.jpg" alt="Shoes" />
+            <span>Shoes</span>
+        </a>
+    </li>
+    <li>
+        <a href="http://m1.local.de/accessories/bags-luggage.html">
+            <img src="http://m1.local.de/media/wysiwyg/Accessoriesbagimg.jpg" alt="Bags" />
+            <span>Bags & Luggage</span>
+        </a>
+    </li>
+</ul>
