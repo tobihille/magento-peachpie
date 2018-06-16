@@ -31,8 +31,10 @@
  * @package     Mage_XmlConnect
  * @author      Magento Core Team <core@magentocommerce.com>
  */
+//TODO: hack to make peachpie run
 abstract class Mage_XmlConnect_Block_Checkout_Payment_Method_Pbridge_Abstract
-    extends Enterprise_Pbridge_Block_Payment_Form_Abstract
+    extends Varien_Object
+    //extends Enterprise_Pbridge_Block_Payment_Form_Abstract
 {
     /**
      * Retrieve payment method model

@@ -31,8 +31,10 @@
  * @package     Mage_XmlConnect
  * @author      Magento Core Team <core@magentocommerce.com>
  */
+//TODO: hack to make peachpie run
 class Mage_XmlConnect_Block_Customer_Order_Totals_Customerbalance
-    extends Enterprise_CustomerBalance_Block_Sales_Order_Customerbalance
+    extends Varien_Object
+    //extends Enterprise_CustomerBalance_Block_Sales_Order_Customerbalance
 {
     /**
      * Add order total rendered to XML object
