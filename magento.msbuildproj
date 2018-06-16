@@ -10,6 +10,7 @@
       <!-- PHP3012 Unreachable code detected -->
       <!-- PHP3007 Undefined variable -->
       <!-- PHP3010 Use of 'eval()' is discouraged -->
+    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
