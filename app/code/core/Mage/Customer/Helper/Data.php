@@ -747,6 +747,7 @@ class Mage_Customer_Helper_Data extends Mage_Core_Helper_Abstract
      */
     protected function _createVatNumberValidationSoapClient($trace = false)
     {
-        return new SoapClient(self::VAT_VALIDATION_WSDL_URL, array('trace' => $trace));
+        //TODO: hack to make peachpie run
+        return false; //new SoapClient(self::VAT_VALIDATION_WSDL_URL, array('trace' => $trace));
     }
 }
