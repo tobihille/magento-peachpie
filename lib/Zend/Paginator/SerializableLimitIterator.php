@@ -33,7 +33,7 @@ class Zend_Paginator_SerializableLimitIterator extends LimitIterator implements 
      *
      * @var int
      */
-    private $_offset;
+    public $_offset;
 
     /**
      * Maximum number of elements to show or -1 for all
