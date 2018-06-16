@@ -31,8 +31,8 @@
  * @package    Varien_Pear
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-
-class Varien_Pear_Frontend extends PEAR_Frontend
+//TODO: hack to make peachpie run
+class Varien_Pear_Frontend extends Varien_Object //extends PEAR_Frontend
 {
     protected $_logStream = null;
     protected $_outStream = null;

@@ -31,8 +31,10 @@
  * @package     Mage_XmlConnect
  * @author      Magento Core Team <core@magentocommerce.com>
  */
+//TODO: hack to make peachpie run
 class Mage_XmlConnect_Block_Customer_Order_Item_Renderer_Giftcard
-    extends Enterprise_GiftCard_Block_Sales_Order_Item_Renderer
+    extends Varien_Object
+    //extends Enterprise_GiftCard_Block_Sales_Order_Item_Renderer
 {
     /**
      * Prepare custom option for display, returns false if there's no value
