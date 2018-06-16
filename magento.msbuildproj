@@ -1,13 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <Description>PHP project compiled into .NET by Peachpie</Description>
+    <Description>Magento CE compiled to .NET by Peachpie</Description>
+    <!-- <NoWarn>PHPX0125</NoWarn> -->
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**/*.php" />
+    <Compile Include="**/*.php" Exclude="dev/**;**/Test/**"/>
   </ItemGroup>
 
   <ItemGroup>
