@@ -3,3 +3,4 @@
 bin/**
 obj/**
 app/etc/local.xml
+var/**
