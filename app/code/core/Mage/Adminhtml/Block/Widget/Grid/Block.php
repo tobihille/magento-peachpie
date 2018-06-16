@@ -39,4 +39,8 @@ class Mage_Adminhtml_Block_Widget_Grid_Block extends Varien_Filter_Object implem
         $block->setPageObject($row);
         echo $block->toHtml();
     }
+
+    public function setColumn() {}
+    
+    public function getColumn() {}
 }

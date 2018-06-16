@@ -60,4 +60,6 @@ File to upload: <input type="file" name="io_file"/> <input type="submit" value="
         return $this;
     }
 
+    public function save() {}
+    
 }
