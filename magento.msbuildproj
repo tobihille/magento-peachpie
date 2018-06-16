@@ -4,7 +4,12 @@
     <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Description>Magento CE compiled to .NET by Peachpie</Description>
-    <!-- <NoWarn>PHPX0125</NoWarn> -->
+
+    <NoWarn>PHPX0181,PHP3012,PHP3007,PHP3010</NoWarn>
+      <!-- Assigning the return value of new by reference is deprecated -->
+      <!-- Unreachable code detected -->
+      <!-- Undefined variable -->
+      <!-- Use of 'eval()' is discouraged -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,4 +20,5 @@
     <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.0-*" />
     <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.0-*" PrivateAssets="Build" />
   </ItemGroup>
+
 </Project>
