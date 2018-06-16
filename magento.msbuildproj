@@ -6,10 +6,10 @@
     <Description>Magento CE compiled to .NET by Peachpie</Description>
 
     <NoWarn>PHPX0181,PHP3012,PHP3007,PHP3010</NoWarn>
-      <!-- Assigning the return value of new by reference is deprecated -->
-      <!-- Unreachable code detected -->
-      <!-- Undefined variable -->
-      <!-- Use of 'eval()' is discouraged -->
+      <!-- PHPX0181 Assigning the return value of new by reference is deprecated -->
+      <!-- PHP3012 Unreachable code detected -->
+      <!-- PHP3007 Undefined variable -->
+      <!-- PHP3010 Use of 'eval()' is discouraged -->
   </PropertyGroup>
 
   <ItemGroup>
