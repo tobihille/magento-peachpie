@@ -2,6 +2,7 @@
 *.msbuildproject
 */bin/**
 */obj/**
+app.config 
 
 website/app/etc/local.xml
 website/var/**
