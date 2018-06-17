@@ -5,17 +5,18 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Description>Magento CE compiled to .NET by Peachpie</Description>
 
-    <NoWarn>PHPX0181,PHP3012,PHP3007,PHP3010,PHPX0125</NoWarn>
+    <NoWarn>PHPX0181,PHP3012,PHP3007,PHP3010,PHPX0125,PHP3011</NoWarn>
       <!-- PHPX0181 Assigning the return value of new by reference is deprecated -->
       <!-- PHP3012 Unreachable code detected -->
       <!-- PHP3007 Undefined variable -->
       <!-- PHP3010 Use of 'eval()' is discouraged -->
       <!-- PHPX0125 mandatory parameter declared behind optional one -->
+      <!-- PHP3011 The declaration of 'class' is ambiguous -->
     <LangVersion>7.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**/*.php" Exclude="dev/**;**/Test/**" />
+    <Compile Include="**/*.php" Exclude="dev/**;**/Test/**;downloader/**" />
   </ItemGroup>
 
   <ItemGroup>
