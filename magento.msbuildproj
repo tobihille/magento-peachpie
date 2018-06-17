@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**/*.php" Exclude="dev/**;**/Test/**" />
+    <Compile Include="**/*.phtml;**/*.php" Exclude="dev/**;**/Test/**" />
   </ItemGroup>
 
   <ItemGroup>
