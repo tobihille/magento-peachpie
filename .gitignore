@@ -1,7 +1,7 @@
 **/.vscode/**
 *.msbuildproject
-*/bin/**
-*/obj/**
+**/bin/**
+**/obj/**
 app.config 
 
 website/app/etc/local.xml
