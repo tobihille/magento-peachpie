@@ -7,11 +7,12 @@ In the Process of doing this some fixes called "core hacks" are neccessary to sa
   * reduce warnings in general, optimal would be zero
 * a step-by-step - guide to setup would be nice
 * generate a release build
+* fix constant Mage_Exception errors
 
 # Done
 * make it compile to a .dll - file
 * a minimal webserver exists utilizing Kestral compiles into a dll too 
-* webserver is runnable (more precise callable, still exceptions atm)
+* webserver runs without startup problems
 
 # State
 * experimental (not even alpha)

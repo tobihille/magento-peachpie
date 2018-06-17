@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Peachpie.Web;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using System.Configuration; 
 
 namespace peachserver
 {
@@ -12,8 +13,8 @@ namespace peachserver
         static void Main() {
             try {
                 //var root = Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()) + "/website";
-                var root = "C:/Users/tobih/Documents/webroot/hackathon_m1/website/";
-            
+                var root = Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()) + "/" + ConfigurationManager.AppSettings["webserverDir"] + "/website";
+  
                 var host = new WebHostBuilder()
                     .UseKestrel()
                     //.UseWebRoot(root)
@@ -25,7 +26,7 @@ namespace peachserver
                     .Build();
             
                 host.Run();
-            } catch (ex) {
+            } catch (Exception ex) {
                 Console.WriteLine(ex.ToString());
             }
         }
