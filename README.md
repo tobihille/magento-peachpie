@@ -4,11 +4,11 @@ In the Process of doing this some fixes called "core hacks" are neccessary to sa
 
 # ToDo
 * some messages classified as warnings are rather serious (like missing mcrypt functions), this should be fixed if possible
-* there is some glue code missing to use the magento.dll (let's call it a webserver ;-) )
 * a step-by-step - guide to setup would be nice
 
 # Done
 * make it compile to a .dll - file
+* a minimal webserver exists utilizing Kestral
 
 # State
 * experimental (not even alpha)
