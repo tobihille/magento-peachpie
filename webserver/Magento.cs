@@ -12,14 +12,16 @@ namespace peachserver
     class Magento {
         static void Main() {
             try {
-                //var root = Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()) + "/website";
-                var root = Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()) + "/" + ConfigurationManager.AppSettings["webserverDir"] + "/website";
+                var root = Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()) + 
+                    "/" + 
+                    ConfigurationManager.AppSettings["webserverDir"] + 
+                    "/website";
   
                 var host = new WebHostBuilder()
                     .UseKestrel()
-                    //.UseWebRoot(root)
+                    .UseWebRoot(root)
                     //content root with static files
-                    //.UseContentRoot(root) 
+                    .UseContentRoot(root) 
                     .UseUrls("http://*:5004/")
                     //initialization routine, see below
                     .UseStartup<Startup>() 
