@@ -1,10 +1,10 @@
-.vscode/**
+**/.vscode/**
 *.msbuildproject
 */bin/**
 */obj/**
 
 website/app/etc/local.xml
-website/var/*
+website/var/**
 
 .idea/**
 website/.idea/**
