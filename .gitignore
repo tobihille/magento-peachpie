@@ -2,6 +2,12 @@
 *.msbuildproject
 bin/**
 obj/**
-app/etc/local.xml
-var/**
+
+website/bin/**
+website/obj/**
+
+website/app/etc/local.xml
+website/var/**
+
 .idea/**
+website/.idea/**
