@@ -28,9 +28,11 @@ namespace peachserver
                     .Build();
             
                 host.Run();
+            } catch (Pchp.Core.ScriptDiedException ex) {
+                Console.WriteLine(ex.ToString());
             } catch (Exception ex) {
                 Console.WriteLine(ex.ToString());
-            }
+            } 
         }
     }
     
@@ -43,8 +45,8 @@ namespace peachserver
 
             app.UsePhp( new PhpRequestOptions() { ScriptAssembliesName = new[] { "magento" } } ); // installs handler for *.php files and forwards them to our website.dll
 
-            //app.UseDefaultFiles();
-            //app.UseStaticFiles();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
         }
     }
 }
