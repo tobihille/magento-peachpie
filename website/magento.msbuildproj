@@ -25,6 +25,7 @@
     <PackageReference Include="Peachpie.Library.Graphics" Version="0.9.0-CI00947" />
     <PackageReference Include="Peachpie.Library.Network" Version="0.0.0-*" />
     <PackageReference Include="Peachpie.Library.XmlDom" Version="0.9.0-dev" />
+    <PackageReference Include="Peachpie.Library" Version="0.9.0-dev" />
   </ItemGroup>
 
 </Project>

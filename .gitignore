@@ -9,3 +9,5 @@ website/var/**
 
 .idea/**
 website/.idea/**
+
+.vs/**
