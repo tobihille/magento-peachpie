@@ -5,6 +5,7 @@
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
+            "justMyCode":false,
             "preLaunchTask": "build",
             "program": "${workspaceRoot}/webserver/bin/Debug/netcoreapp2.0/webserver.dll",
             "args": [],
