@@ -24,9 +24,6 @@
     <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.0-CI00947" />
     <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.0-CI00947" PrivateAssets="Build" />
     <PackageReference Include="Peachpie.Library.Graphics" Version="0.9.0-CI00947" />
-    <PackageReference Include="Peachpie.Library.Network" Version="0.9.0-*" />
-    <PackageReference Include="Peachpie.Library.PDO.MySQL" Version="0.9.0-*" />
-    <PackageReference Include="Peachpie.Library.PDO " Version="0.9.0-*" />
 
     <!-- versions from local compilation 
       to use these you must run the following steps:
@@ -36,6 +33,12 @@
     -->
     <PackageReference Include="Peachpie.Library.XmlDom" Version="0.9.0-dev" />
     <PackageReference Include="Peachpie.Library" Version="0.9.0-dev" />
+    <PackageReference Include="Peachpie.Runtime" Version="0.9.0-dev" />
+    <PackageReference Include="Peachpie.Library.PDO" Version="0.9.0-dev" />
+    <PackageReference Include="Peachpie.Library.PDO.MySQL" Version="0.9.0-dev" />
+    <PackageReference Include="Peachpie.Library.MySQL" Version="0.9.0-dev" />
+    <PackageReference Include="Peachpie.Library.Network" Version="0.9.0-dev" />
+
   </ItemGroup>
 
 </Project>

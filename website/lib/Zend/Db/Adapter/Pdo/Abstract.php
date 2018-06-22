@@ -44,9 +44,6 @@
  */
 abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
 {
-
-    protected $_pdoType = ""; //workaround for https://github.com/peachpiecompiler/peachpie/issues/225
-
     /**
      * Default class name for a DB statement.
      *

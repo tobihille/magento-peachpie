@@ -369,11 +369,7 @@ class Varien_Db_Adapter_Pdo_Mysql extends Zend_Db_Adapter_Pdo_Mysql implements V
         }
 
         if (!extension_loaded('pdo_mysql')) {
-            //workaround issue https://github.com/peachpiecompiler/peachpie/issues/224
-            // if pdo is not present it will crash soon enough, no need to trigger it here ...
-            
-            //throw new Zend_Db_Adapter_Exception('pdo_mysql extension is not installed');
-            //Mage::log('pdo_mysql extension is not installed, this could be a serious issue!');
+            throw new Zend_Db_Adapter_Exception('pdo_mysql extension is not installed');
         }
 
         $hostInfo = $this->_getHostInfo($this->_config['host']);
