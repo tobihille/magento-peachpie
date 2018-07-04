@@ -9,5 +9,6 @@ website/var/**
 
 .idea/**
 website/.idea/**
+website/errors/local.xml
 
 .vs/**
