@@ -5,8 +5,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Description>Magento CE compiled to .NET by Peachpie</Description>
 
-    <NoWarn>PHPX0181,PHP3012,PHP3007,PHP3010,PHPX0125,PHP3011</NoWarn>
-      <!-- PHPX0181 Assigning the return value of new by reference is deprecated -->
+    <NoWarn>PHP0181,PHP3012,PHP3007,PHP3010,PHPX0125,PHP3011</NoWarn>
+      <!-- PHP0181 Assigning the return value of new by reference is deprecated -->
       <!-- PHP3012 Unreachable code detected -->
       <!-- PHP3007 Undefined variable -->
       <!-- PHP3010 Use of 'eval()' is discouraged -->
@@ -21,9 +21,9 @@
 
   <ItemGroup>
     <!-- versions fetched via NuGet -->
-    <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.0-CI00947" />
-    <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.0-CI00947" PrivateAssets="Build" />
-    <PackageReference Include="Peachpie.Library.Graphics" Version="0.9.0-CI00947" />
+    <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.0-dev" />
+    <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.0-dev" PrivateAssets="Build" />
+    <PackageReference Include="Peachpie.Library.Graphics" Version="0.9.0-dev" />
 
     <!-- versions from local compilation 
       to use these you must run the following steps:

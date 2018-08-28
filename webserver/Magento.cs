@@ -2,7 +2,7 @@ using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.DependencyInjection;
-using Peachpie.Web;
+using Peachpie.AspNetCore.Web;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using System.Configuration; 
