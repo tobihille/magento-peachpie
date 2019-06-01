@@ -36,7 +36,7 @@ namespace peachserver
     
     class Startup {
         public void Configure(IApplicationBuilder app) {
-            Pchp.Core.Context.DefaultErrorHandler = new Pchp.Core.CustomErrorHandler(); // disables debug asserts
+            //Pchp.Core.Context.DefaultErrorHandler = new Pchp.Core.CustomErrorHandler(); // disables debug asserts
     
             // enable session:
             //app.UseSession();
