@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Adminhtml
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -367,7 +367,7 @@ class Mage_Adminhtml_Model_Extension extends Varien_Object
         $result = $pear->run('info', $options, array($package));
         if ($result instanceof PEAR_Error) {
             Mage::throwException($result->message);
-            //break; //won't be called anyway ^^
+            break;
         }
 
         $output = $pear->getOutput();
@@ -386,7 +386,7 @@ class Mage_Adminhtml_Model_Extension extends Varien_Object
         $result = $pear->run('remote-info', $options, array($package));
         if ($result instanceof PEAR_Error) {
             Mage::throwException($result->message);
-            //break; //won't be called anyway ^^
+            break;
         }
 
         $output = $pear->getOutput();

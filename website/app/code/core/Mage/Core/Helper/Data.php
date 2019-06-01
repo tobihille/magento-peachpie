@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Core
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -651,11 +651,30 @@ XML;
      * Decodes the given $encodedValue string which is
      * encoded in the JSON format
      *
+     * switch added to prevent exceptions in json_decode
+     *
      * @param string $encodedValue
      * @return mixed
      */
     public function jsonDecode($encodedValue, $objectDecodeType = Zend_Json::TYPE_ARRAY)
     {
+        switch (true) {
+            case (null === $encodedValue):
+                $encodedValue = 'null';
+                break;
+            case (true === $encodedValue):
+                $encodedValue = 'true';
+                break;
+            case (false === $encodedValue):
+                $encodedValue = 'false';
+                break;
+            case ('' === $encodedValue):
+                $encodedValue = '""';
+                break;
+            default:
+                // do nothing
+        }
+
         return Zend_Json::decode($encodedValue, $objectDecodeType);
     }
 

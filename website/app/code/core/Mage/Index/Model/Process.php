@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Index
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -442,7 +442,7 @@ class Mage_Index_Model_Process extends Mage_Core_Model_Abstract
      */
     public function lock()
     {
-        $this->_getLockInstance()->setLock($this->getProcessLockName(), $this->getData('use_file_lock'));
+        $this->_getLockInstance()->setLock($this->getProcessLockName(), true);
         return $this;
     }
 
@@ -455,7 +455,7 @@ class Mage_Index_Model_Process extends Mage_Core_Model_Abstract
      */
     public function lockAndBlock()
     {
-        $this->_getLockInstance()->setLock($this->getProcessLockName(), $this->getData('use_file_lock'), true);
+        $this->_getLockInstance()->setLock($this->getProcessLockName(), true, true);
         return $this;
     }
 
@@ -466,7 +466,7 @@ class Mage_Index_Model_Process extends Mage_Core_Model_Abstract
      */
     public function unlock()
     {
-        $this->_getLockInstance()->releaseLock($this->getProcessLockName(), $this->getData('use_file_lock'));
+        $this->_getLockInstance()->releaseLock($this->getProcessLockName(), true);
         return $this;
     }
 
@@ -477,7 +477,7 @@ class Mage_Index_Model_Process extends Mage_Core_Model_Abstract
      */
     public function isLocked()
     {
-        return $this->_getLockInstance()->isLockExists($this->getProcessLockName(), $this->getData('use_file_lock'));
+        return $this->_getLockInstance()->isLockExists($this->getProcessLockName(), true);
     }
 
     /**

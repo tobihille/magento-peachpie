@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Customer
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -460,6 +460,17 @@ class Mage_Customer_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
+     * Generate unique token based on customer Id for reset password confirmation link
+     *
+     * @param $customerId
+     * @return string
+     */
+    public function generateResetPasswordLinkCustomerId($customerId)
+    {
+        return md5(uniqid($customerId . microtime() . mt_rand(), true));
+    }
+
+    /**
      * Retrieve customer reset password link expiration period in days
      *
      * @return int
@@ -747,7 +758,6 @@ class Mage_Customer_Helper_Data extends Mage_Core_Helper_Abstract
      */
     protected function _createVatNumberValidationSoapClient($trace = false)
     {
-        //TODO: hack to make peachpie run
-        return false; //new SoapClient(self::VAT_VALIDATION_WSDL_URL, array('trace' => $trace));
+        return new SoapClient(self::VAT_VALIDATION_WSDL_URL, array('trace' => $trace));
     }
 }

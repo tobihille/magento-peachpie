@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Core
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -48,24 +48,6 @@ if (get_magic_quotes_gpc()) {
     $_POST = mageUndoMagicQuotes($_POST);
     $_COOKIE = mageUndoMagicQuotes($_COOKIE);
     $_REQUEST = mageUndoMagicQuotes($_REQUEST);
-}
-
-/**
- * Class autoload
- *
- * @todo change to spl_autoload_register
- * @deprecated
- * @param string $class
- */
-function __autoload($class)
-{
-    if (defined('COMPILER_INCLUDE_PATH')) {
-        $classFile = $class.'.php';
-    } else {
-        $classFile = uc_words($class, DIRECTORY_SEPARATOR).'.php';
-    }
-
-    include($classFile);
 }
 
 /**
@@ -176,6 +158,11 @@ function mageCoreErrorHandler($errno, $errstr, $errfile, $errline){
     }
     if (!defined('E_DEPRECATED')) {
         define('E_DEPRECATED', 8192);
+    }
+
+    // Suppress deprecation warnings on PHP 7.x
+    if ($errno == E_DEPRECATED && version_compare(PHP_VERSION, '7.0.0', '>=')) {
+        return true;
     }
 
     // PEAR specific message handling

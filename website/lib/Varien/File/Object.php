@@ -20,7 +20,7 @@
  *
  * @category    Varien
  * @package     Varien_File
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -36,8 +36,7 @@ require_once("Varien/Object.php");
 require_once('Varien/Directory/IFactory.php');
 
 class Varien_File_Object extends SplFileObject implements IFactory {
-    //todo remove in the future peachpie related 
-    public $_filename;
+    protected $_filename;
     protected $_path;
     protected $_filter;
     protected $_isCorrect=true; # - pass or not filter checking

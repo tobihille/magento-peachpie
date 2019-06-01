@@ -20,7 +20,7 @@
  *
  * @category    Varien
  * @package     Varien_Autoload
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -91,7 +91,7 @@ class Varien_Autoload
         }
         $classFile.= '.php';
         //echo $classFile;die();
-        return include $classFile;
+        return @include $classFile;
     }
 
     /**

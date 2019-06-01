@@ -20,7 +20,7 @@
  *
  * @category    Varien
  * @package     Varien_File
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -519,7 +519,7 @@ class Varien_File_Uploader
 
                 $fileAttributes = $tmp_var;
                 $this->_file = $fileAttributes;
-            } elseif( count($fileId) > 0 && isset($_FILES[$fileId])) {
+            } elseif(!empty($fileId) && isset($_FILES[$fileId])) {
                 $this->_uploadType = self::SINGLE_STYLE;
                 $this->_file = $_FILES[$fileId];
             } elseif( $fileId == '' ) {

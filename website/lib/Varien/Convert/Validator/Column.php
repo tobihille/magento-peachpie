@@ -20,7 +20,7 @@
  *
  * @category    Varien
  * @package     Varien_Convert
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -35,6 +35,4 @@
 class Varien_Convert_Validator_Column extends Varien_Convert_Validator_Abstract
 {
 
-    public function validate() {}
-        
 }

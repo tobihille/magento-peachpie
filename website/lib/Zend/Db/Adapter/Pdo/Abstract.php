@@ -44,6 +44,7 @@
  */
 abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
 {
+
     /**
      * Default class name for a DB statement.
      *
@@ -69,26 +70,12 @@ abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
         unset($dsn['persistent']);
         unset($dsn['driver_options']);
 
-        //skip useless dsn entries which let mysql connector/net crash
-        $keysToSkip = ['model', 'type', 'pdoType', 'initStatements', 'active'];
-        $reappend = [];
-
         // use all remaining parts in the DSN
         foreach ($dsn as $key => $val) {
-            if (in_array($key, $keysToSkip)) {
-                $reappend[$key] = $val;
-                unset($dsn[$key]); //prevent useless values in implode
-                continue;
-            }
             $dsn[$key] = "$key=$val";
         }
-        $dsnString = $this->_pdoType . ':' . implode(';', $dsn);
 
-        foreach ($reappend as $key => $val) {
-            $dsn[$key] = $val;
-        }
-
-        return $dsnString;
+        return $this->_pdoType . ':' . implode(';', $dsn);
     }
 
     /**
@@ -122,8 +109,7 @@ abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
              * @see Zend_Db_Adapter_Exception
              */
             #require_once 'Zend/Db/Adapter/Exception.php';
-            //throw new Zend_Db_Adapter_Exception('The ' . $this->_pdoType . ' driver is not currently installed');
-            //TODO: once this is working again in peachpie reenable it
+            throw new Zend_Db_Adapter_Exception('The ' . $this->_pdoType . ' driver is not currently installed');
         }
 
         // create PDO connection
@@ -143,10 +129,6 @@ abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
             );
 
             $this->_profiler->queryEnd($q);
-
-            //workaround: mysql connector/net does not support init statement - so we workaround this way 
-            // - this works for php and .net as well
-            $this->_connection->exec($this->_config['initStatements']);
 
             // set the PDO connection to perform case-folding on array keys, or not
             $this->_connection->setAttribute(PDO::ATTR_CASE, $this->_caseFolding);

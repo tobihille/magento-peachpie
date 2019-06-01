@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Wishlist
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -636,6 +636,9 @@ class Mage_Wishlist_IndexController extends Mage_Wishlist_Controller_Abstract
         $error   = false;
         if (empty($emails)) {
             $error = $this->__('Email address can\'t be empty.');
+        }
+        elseif (count($emails) > 5) {
+            $error = $this->__('Please enter no more than 5 email addresses.');
         }
         else {
             foreach ($emails as $index => $email) {

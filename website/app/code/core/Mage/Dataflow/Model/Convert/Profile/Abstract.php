@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Dataflow
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -113,8 +113,7 @@ abstract class Mage_Dataflow_Model_Convert_Profile_Abstract
     public function importXml(Varien_Simplexml_Element $profileNode)
     {
         foreach ($profileNode->action as $actionNode) {
-            //TODO: fixed for peachpie; hopefully this is working =)
-            $action = $profileNode->addAction();
+            $action = $profile->addAction();
             $action->importXml($actionNode);
         }
 

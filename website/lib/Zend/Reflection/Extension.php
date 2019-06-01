@@ -35,8 +35,7 @@
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
-//TODO: hack to make peachpie run
-class Zend_Reflection_Extension extends Varien_Object //extends ReflectionExtension
+class Zend_Reflection_Extension extends ReflectionExtension
 {
     /**
      * Get extension function reflection objects

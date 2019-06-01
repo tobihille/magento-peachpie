@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Wishlist
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -102,7 +102,7 @@ class Mage_Wishlist_Model_Observer extends Mage_Core_Model_Abstract
             $wishlistIds = array($singleWishlistId);
         }
 
-        if (count($wishlistIds) && $request->getParam('wishlist_next')){
+        if (empty($wishlistIds) && $request->getParam('wishlist_next')){
             $wishlistId = array_shift($wishlistIds);
 
             if (Mage::getSingleton('customer/session')->isLoggedIn()) {
@@ -125,7 +125,7 @@ class Mage_Wishlist_Model_Observer extends Mage_Core_Model_Abstract
             Mage::getSingleton('checkout/session')->setSingleWishlistId(null);
         }
 
-        if ($request->getParam('wishlist_next') && count($urls)) {
+        if ($request->getParam('wishlist_next') && empty($urls)) {
             $url = array_shift($urls);
             $message = array_shift($messages);
 

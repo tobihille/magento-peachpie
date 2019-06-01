@@ -20,7 +20,7 @@
  *
  * @category    Varien
  * @package     Varien_Pear
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -31,8 +31,8 @@
  * @package    Varien_Pear
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-//TODO: hack to make peachpie run
-class Varien_Pear_Frontend extends Varien_Object //extends PEAR_Frontend
+
+class Varien_Pear_Frontend extends PEAR_Frontend
 {
     protected $_logStream = null;
     protected $_outStream = null;

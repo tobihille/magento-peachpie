@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_XmlConnect
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -31,10 +31,8 @@
  * @package     Mage_XmlConnect
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-//TODO: hack to make peachpie run
 class Mage_XmlConnect_Block_Customer_Order_Item_Renderer_Giftcard
-    extends Varien_Object
-    //extends Enterprise_GiftCard_Block_Sales_Order_Item_Renderer
+    extends Enterprise_GiftCard_Block_Sales_Order_Item_Renderer
 {
     /**
      * Prepare custom option for display, returns false if there's no value

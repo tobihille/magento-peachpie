@@ -157,24 +157,20 @@ class Zend_Tool_Project_Provider_Form extends Zend_Tool_Project_Provider_Abstrac
 
             $this->_registry->getResponse()->appendContent('Would create a form at '  . $formResource->getContext()->getPath());
 
-            /*
             if ($testFormResource) {
                 $this->_registry->getResponse()->appendContent('Would create a form test file at ' . $testFormResource->getContext()->getPath());
             }
-            */
 
         } else {
 
             $this->_registry->getResponse()->appendContent('Creating a form at ' . $formResource->getContext()->getPath());
             $formResource->create();
 
-            /*
             if ($testFormResource) {
                 $this->_registry->getResponse()->appendContent('Creating a form test file at ' . $testFormResource->getContext()->getPath());
                 $testFormResource->create();
             }
-            */
-            
+
             $this->_storeProfile();
         }
 

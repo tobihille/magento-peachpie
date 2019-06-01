@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Checkout
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -58,6 +58,9 @@ class Mage_Checkout_OnepageController extends Mage_Checkout_Controller_Action
     {
         parent::preDispatch();
         $this->_preDispatchValidateCustomer();
+
+        // Disable flat for product collection
+        Mage::helper('catalog/product_flat')->disableFlatCollection(true);
 
         $checkoutSessionQuote = Mage::getSingleton('checkout/session')->getQuote();
         if ($checkoutSessionQuote->getIsMultiShipping()) {

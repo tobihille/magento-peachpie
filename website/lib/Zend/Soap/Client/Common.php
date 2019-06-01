@@ -28,8 +28,7 @@ if (extension_loaded('soap')) {
  * @package    Zend_Soap
  * @subpackage Client
  */
-//TODO: hack to make peachpie run
-class Zend_Soap_Client_Common extends Varien_Object //extends SoapClient
+class Zend_Soap_Client_Common extends SoapClient
 {
     /**
      * doRequest() pre-processing method

@@ -122,13 +122,10 @@ class Zend_Service_StrikeIron_Base
             $this->_options['options'] = array();
         }
 
-        //TODO: hack to make peachpie run
-        /*
         if (! isset($this->_options['client'])) {
             $this->_options['client'] = new SoapClient($this->_options['wsdl'],
                                                        $this->_options['options']);
         }
-        */
     }
 
     /**

@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Shipping
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -74,11 +74,12 @@ class Mage_Shipping_Model_Carrier_Flatrate
         $this->setFreeBoxes($freeBoxes);
 
         $result = Mage::getModel('shipping/rate_result');
-        if ($this->getConfigData('type') == 'O') { // per order
-            $shippingPrice = $this->getConfigData('price');
-        } elseif ($this->getConfigData('type') == 'I') { // per item
-            $shippingPrice = ($request->getPackageQty() * $this->getConfigData('price')) - ($this->getFreeBoxes() * $this->getConfigData('price'));
-        } else {
+
+        $shippingType = $this->getConfigData('type');
+        $shippingPrice = (float)$this->getConfigData('price');
+        if ('I' == $shippingType) { // per item
+            $shippingPrice = ($request->getPackageQty() * $shippingPrice) - ($this->getFreeBoxes() * $shippingPrice);
+        } elseif ('O' != $shippingType) { // not per order
             $shippingPrice = false;
         }
 

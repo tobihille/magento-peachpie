@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_Catalog
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -155,7 +155,9 @@ class Mage_Catalog_Model_Product_Attribute_Media_Api extends Mage_Catalog_Model_
 
             // try to create Image object - it fails with Exception if image is not supported
             try {
-                new Varien_Image($tmpDirectory . DS . $fileName);
+                $filePath = $tmpDirectory . DS . $fileName;
+                new Varien_Image($filePath);
+                Mage::getModel('core/file_validator_image')->validate($filePath);
             } catch (Exception $e) {
                 // Remove temporary directory
                 $ioAdapter->rmdir($tmpDirectory, true);

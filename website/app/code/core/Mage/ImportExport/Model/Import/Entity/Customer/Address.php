@@ -20,7 +20,7 @@
  *
  * @category    Mage
  * @package     Mage_ImportExport
- * @copyright  Copyright (c) 2006-2018 Magento, Inc. (http://www.magento.com)
+ * @copyright  Copyright (c) 2006-2019 Magento, Inc. (http://www.magento.com)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -303,7 +303,9 @@ class Mage_ImportExport_Model_Import_Entity_Customer_Address extends Mage_Import
                 'code'        => $attribute->getAttributeCode(),
                 'table'       => $attribute->getBackend()->getTable(),
                 'is_required' => $attribute->getIsRequired(),
-                'rules'       => $attribute->getValidateRules() ? unserialize($attribute->getValidateRules()) : null,
+                'rules'       => $attribute->getValidateRules()
+                    ? Mage::helper('core/unserializeArray')->unserialize($attribute->getValidateRules())
+                    : null,
                 'type'        => Mage_ImportExport_Model_Import::getAttributeType($attribute),
                 'options'     => $this->getAttributeOptions($attribute)
             );

@@ -527,7 +527,6 @@ class Zend_Text_Table
             return $this->render();
         } catch (Exception $e) {
             trigger_error($e->getMessage(), E_USER_ERROR);
-            return '';
         }
 
     }
