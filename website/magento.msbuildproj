@@ -36,10 +36,6 @@
     <PackageReference Include="Peachpie.Runtime" Version="0.9.42"/>
     <PackageReference Include="Peachpie.Library.PDO" Version="0.9.42"/>
     <PackageReference Include="Peachpie.Library.PDO.MySQL" Version="0.9.42"/>
-    <PackageReference Include="Peachpie.Library.PDO.Firebird" Version="0.9.42"/>
-    <PackageReference Include="Peachpie.Library.PDO.SqlSrv" Version="0.9.42"/>
-    <PackageReference Include="Peachpie.Library.PDO.Sqlite" Version="0.9.42"/>
-    <PackageReference Include="Peachpie.Library.PDO.PgSQL" Version="0.9.42"/>
     <PackageReference Include="Peachpie.Library.MySQL" Version="0.9.42"/>
     <PackageReference Include="Peachpie.Library.Network" Version="0.9.42"/>
   </ItemGroup>
