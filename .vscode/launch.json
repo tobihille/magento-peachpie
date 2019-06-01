@@ -7,9 +7,9 @@
             "request": "launch",
             "justMyCode":false,
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/webserver/bin/Debug/netcoreapp2.0/webserver.dll",
+            "program": "${workspaceFolder}/webserver/bin/Debug/netcoreapp2.0/webserver.dll",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceFolder}",
             "externalConsole": false,
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
