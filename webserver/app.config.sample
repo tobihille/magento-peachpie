@@ -2,6 +2,6 @@
 <configuration>
   <appSettings>
     <add key="webserverDir" value="{path to website}"/>
-    <add key="port" value="{port the webserver is listening to}">
+    <add key="port" value="{port the webserver is listening to}"/>
   </appSettings>
 </configuration>
