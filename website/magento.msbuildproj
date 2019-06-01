@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <!-- versions fetched via NuGet -->
-    <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.28"/>
+    <!--<DotNetCliToolReference Include="Peachpie.NET.Sdk" Version="0.9.28"/>-->
     <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.28" PrivateAssets="Build"/>
     <PackageReference Include="Peachpie.Library.Graphics" Version="0.9.28"/>
 
