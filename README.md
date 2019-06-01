@@ -1,7 +1,7 @@
 
 # Magento-Peachpie
 
-This Project mirrors [Magento 1.9.3.8](https://magento.com/tech-resources/download) and tries to make it compile via [Peachpie](https://www.peachpie.io/) (on [GitHub](https://github.com/peachpiecompiler/peachpie)) to .NET.  
+This Project mirrors [Magento 1.9.4.1](https://magento.com/tech-resources/download) and tries to make it compile via [Peachpie](https://www.peachpie.io/) (on [GitHub](https://github.com/peachpiecompiler/peachpie)) to .NET.  
  In the Process of doing this some fixes (in Magento and used libraries) called "core hacks" are neccessary to satisfy the static compiler - so be warned!
 
 # ToDo
