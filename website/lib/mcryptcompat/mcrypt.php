@@ -1034,6 +1034,17 @@ if (!function_exists('phpseclib_mcrypt_list_algorithms')) {
     }
 
     /**
+     * ###
+     * CRITICAL TEMPORARY HACK: (most likely breaks mcrypt compatibilty layer)
+     * class mock because peachpie up to 0.9.42 doesn't implement this class   
+     * ###
+     */
+    class php_user_filter {
+
+    }; 
+    // ###
+
+    /**
      * mcrypt_compat stream filter
      *
      * @author  Jim Wigginton <terrafrost@php.net>
