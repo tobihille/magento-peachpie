@@ -14,19 +14,17 @@ namespace peachserver
             try {
                 var root = Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()) + 
                     "/" + 
-                    ConfigurationManager.AppSettings["webserverDir"] + 
-                    "/website";
+                    ConfigurationManager.AppSettings["webserverDir"]; 
   
                 var host = new WebHostBuilder()
                     .UseKestrel()
                     .UseWebRoot(root)
                     //content root with static files
                     .UseContentRoot(root) 
-                    .UseUrls("http://*:5004/")
+                    .UseUrls("http://*:" + ConfigurationManager.AppSettings["port"] + "/")
                     //initialization routine, see below
                     .UseStartup<Startup>() 
                     .Build();
-            
                 host.Run();
             } catch (Pchp.Core.ScriptDiedException ex) {
                 Console.WriteLine(ex.ToString());
@@ -43,8 +41,7 @@ namespace peachserver
             // enable session:
             //app.UseSession();
 
-            app.UsePhp( new PhpRequestOptions() { ScriptAssembliesName = new[] { "magento" } } ); // installs handler for *.php files and forwards them to our website.dll
-
+            app.UsePhp( new PhpRequestOptions() {ScriptAssembliesName = new[] {"magento"}}); // installs handler for *.php files and forwards them to website.dll
             app.UseDefaultFiles();
             app.UseStaticFiles();
         }

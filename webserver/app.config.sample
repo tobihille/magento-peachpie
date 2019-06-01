@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <appSettings>
-    <add key="webserverDir" value="hackathon"/>
+    <add key="webserverDir" value="{path to website}"/>
+    <add key="port" value="{port the webserver is listening to}">
   </appSettings>
 </configuration>
