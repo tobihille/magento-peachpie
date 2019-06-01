@@ -117,14 +117,19 @@ abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
         }
 
         // check the PDO driver is available
-        if (!in_array($this->_pdoType, PDO::getAvailableDrivers())) {
-            /**
-             * @see Zend_Db_Adapter_Exception
-             */
-            #require_once 'Zend/Db/Adapter/Exception.php';
-            //throw new Zend_Db_Adapter_Exception('The ' . $this->_pdoType . ' driver is not currently installed');
-            //TODO: once this is working again in peachpie reenable it
-        }
+        /* #####
+           Check finds all PeachPie PDO implementations and throws exception (and handles it) if one or more libraries/drivers are missing
+           Check is unnecessary for now because Magento only uses 'mysql'
+           TODO: once this is working again in peachpie reenable it
+        */
+            //if (!in_array($this->_pdoType, array_filter(PDO::getAvailableDrivers(), function ($driver) {return $driver === 'mysql';}))) {
+                /**
+                 * @see Zend_Db_Adapter_Exception
+                 */
+                //require_once 'Zend/Db/Adapter/Exception.php';
+                //throw new Zend_Db_Adapter_Exception('The ' . $this->_pdoType . ' driver is not currently installed');
+            //}
+        // ######
 
         // create PDO connection
         $q = $this->_profiler->queryStart('connect', Zend_Db_Profiler::CONNECT);
