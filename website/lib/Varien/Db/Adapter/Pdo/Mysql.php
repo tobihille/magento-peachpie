@@ -400,7 +400,7 @@ class Varien_Db_Adapter_Pdo_Mysql extends Zend_Db_Adapter_Pdo_Mysql implements V
 
         if (!$this->_connectionFlagsSet) {
             $this->_connection->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
-            $this->_connection->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
+            //$this->_connection->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
             $this->_connectionFlagsSet = true;
         }
     }

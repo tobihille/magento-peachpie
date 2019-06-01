@@ -176,7 +176,7 @@ class Mage_Core_Model_Resource
             if ($connection instanceof Varien_Db_Adapter_Interface) {
                 // run after initialization statements
                 if (!empty($config['initStatements'])) {
-                    $connection->query($config['initStatements']);
+                    $connection->exec($config['initStatements']);
                 }
             } else {
                 $connection = false;

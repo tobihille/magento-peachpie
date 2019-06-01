@@ -146,7 +146,7 @@ abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
 
             //workaround: mysql connector/net does not support init statement - so we workaround this way 
             // - this works for php and .net as well
-            $this->_connection->query($this->_config['initStatements']);
+            $this->_connection->exec($this->_config['initStatements']);
 
             // set the PDO connection to perform case-folding on array keys, or not
             $this->_connection->setAttribute(PDO::ATTR_CASE, $this->_caseFolding);
