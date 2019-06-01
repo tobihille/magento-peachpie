@@ -21,9 +21,9 @@
 
   <ItemGroup>
     <!-- versions fetched via NuGet -->
-    <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.0-dev" />
-    <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.0-dev" PrivateAssets="Build" />
-    <PackageReference Include="Peachpie.Library.Graphics" Version="0.9.0-dev" />
+    <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.9-*" />
+    <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.9-*" PrivateAssets="Build" />
+    <PackageReference Include="Peachpie.Library.Graphics" Version="0.9.9-*" />
 
     <!-- versions from local compilation 
       to use these you must run the following steps:
@@ -31,13 +31,13 @@
         run dotnet build inside - if it fails you need to setup your environment, the error messages help you a lot
         after successful compilation run "build\update-cache.ps1 0.9.0", this provides the -dev - packages
     -->
-    <PackageReference Include="Peachpie.Library.XmlDom" Version="0.9.0-dev" />
-    <PackageReference Include="Peachpie.Library" Version="0.9.0-dev" />
-    <PackageReference Include="Peachpie.Runtime" Version="0.9.0-dev" />
-    <PackageReference Include="Peachpie.Library.PDO" Version="0.9.0-dev" />
-    <PackageReference Include="Peachpie.Library.PDO.MySQL" Version="0.9.0-dev" />
-    <PackageReference Include="Peachpie.Library.MySQL" Version="0.9.0-dev" />
-    <PackageReference Include="Peachpie.Library.Network" Version="0.9.0-dev" />
+    <PackageReference Include="Peachpie.Library.XmlDom" Version="0.9.9-*" />
+    <PackageReference Include="Peachpie.Library" Version="0.9.9-*" />
+    <PackageReference Include="Peachpie.Runtime" Version="0.9.9-*" />
+    <PackageReference Include="Peachpie.Library.PDO" Version="0.9.9-*" />
+    <PackageReference Include="Peachpie.Library.PDO.MySQL" Version="0.9.9-*" />
+    <PackageReference Include="Peachpie.Library.MySQL" Version="0.9.9-*" />
+    <PackageReference Include="Peachpie.Library.Network" Version="0.9.9-*" />
 
   </ItemGroup>
 
