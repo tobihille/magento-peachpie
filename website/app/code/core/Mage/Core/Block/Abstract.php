@@ -905,7 +905,8 @@ abstract class Mage_Core_Block_Abstract extends Varien_Object
      *
      * @return string
      */
-    final public function toHtml()
+    //CORE HACK FOR PEACHPIE: final breaks dll loader
+    /* final */public function toHtml()
     {
         Mage::dispatchEvent('core_block_abstract_to_html_before', array('block' => $this));
         if (Mage::getStoreConfig('advanced/modules_disable_output/' . $this->getModuleName())) {
