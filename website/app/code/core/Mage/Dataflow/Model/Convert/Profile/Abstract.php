@@ -113,7 +113,8 @@ abstract class Mage_Dataflow_Model_Convert_Profile_Abstract
     public function importXml(Varien_Simplexml_Element $profileNode)
     {
         foreach ($profileNode->action as $actionNode) {
-            $action = $profile->addAction();
+            //TODO: fixed for peachpie; hopefully this is working =)
+            $action = $profileNode->addAction();
             $action->importXml($actionNode);
         }
 
