@@ -31,7 +31,10 @@
  * @package     Mage_XmlConnect
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-class Mage_XmlConnect_Block_Customer_Form_Renderer_File extends Enterprise_Customer_Block_Form_Renderer_File
+//TODO: hack to make peachpie run
+class Mage_XmlConnect_Block_Customer_Form_Renderer_File 
+    extends Varien_Object
+    //extends Enterprise_Customer_Block_Form_Renderer_File
 {
     /**
      * Field type

@@ -31,8 +31,10 @@
  * @package     Mage_XmlConnect
  * @author      Magento Core Team <core@magentocommerce.com>
  */
+//TODO: hack to make peachpie run
 class Mage_Xmlconnect_Block_Checkout_Cart_Item_Renderer_Giftcard
-    extends Enterprise_GiftCard_Block_Checkout_Cart_Item_Renderer
+    extends Varien_Object
+    //extends Enterprise_GiftCard_Block_Checkout_Cart_Item_Renderer
 {
     /**
      * Get product thumbnail image

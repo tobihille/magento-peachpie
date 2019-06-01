@@ -31,8 +31,10 @@
  * @package     Mage_XmlConnect
  * @author      Magento Core Team <core@magentocommerce.com>
  */
+//TODO: hack to make peachpie run
 class Mage_XmlConnect_Block_Customer_Order_Totals_Giftcards
-    extends Enterprise_GiftCardAccount_Block_Sales_Order_Giftcards
+    extends Varien_Object
+    //extends Enterprise_GiftCardAccount_Block_Sales_Order_Giftcards
 {
     /**
      * Add order total rendered to XML object

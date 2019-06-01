@@ -31,8 +31,8 @@
  * @package    Varien_Pear
  * @author      Magento Core Team <core@magentocommerce.com>
  */
-
-class Varien_Pear_Registry extends PEAR_Registry
+//TODO: hack to make peachpie run
+class Varien_Pear_Registry extends Varien_Object //extends PEAR_Registry
 {
     function _initializeDepDB()
     {
