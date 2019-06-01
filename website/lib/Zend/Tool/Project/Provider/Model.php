@@ -155,20 +155,23 @@ class Zend_Tool_Project_Provider_Model extends Zend_Tool_Project_Provider_Abstra
 
             $response->appendContent('Would create a model at '  . $modelResource->getContext()->getPath());
 
+            /*
             if ($testModelResource) {
                 $response->appendContent('Would create a model test file at ' . $testModelResource->getContext()->getPath());
             }
-
+            */
         } else {
 
             $response->appendContent('Creating a model at ' . $modelResource->getContext()->getPath());
             $modelResource->create();
 
+            /*
             if ($testModelResource) {
                 $response->appendContent('Creating a model test file at ' . $testModelResource->getContext()->getPath());
                 $testModelResource->create();
             }
-
+            */
+            
             $this->_storeProfile();
         }
 
