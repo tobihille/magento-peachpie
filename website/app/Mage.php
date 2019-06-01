@@ -54,8 +54,12 @@ if (defined('COMPILER_INCLUDE_PATH')) {
 Varien_Autoload::register();
 
 include_once "phpseclib/bootstrap.php";
-include_once "mcryptcompat/mcrypt.php";
-
+/* ###
+   CRITICAL TEMPORARY HACK, breaks things but there are more important problems right now
+   remove comment to restore original functionality
+*/ ###
+   //include_once "mcryptcompat/mcrypt.php";
+// ###
 /**
  * Main Mage hub class
  *
