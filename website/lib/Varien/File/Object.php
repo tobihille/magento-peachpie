@@ -36,7 +36,7 @@ require_once("Varien/Object.php");
 require_once('Varien/Directory/IFactory.php');
 
 class Varien_File_Object extends SplFileObject implements IFactory {
-    protected $_filename;
+    public $_filename;
     protected $_path;
     protected $_filter;
     protected $_isCorrect=true; # - pass or not filter checking
