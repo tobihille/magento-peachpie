@@ -20,14 +20,6 @@
  * @version    $Id$
  */
 
-
-/**
- * @category   Zend
- * @package    Zend_Service_WindowsAzure
- * @subpackage Storage
- * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
- * @license    http://framework.zend.com/license/new-bsd     New BSD License
- */
 class Zend_Service_WindowsAzure_Storage_Batch
 {	
     /**
@@ -105,7 +97,14 @@ class Zend_Service_WindowsAzure_Storage_Batch
         unset($this->_operations);
         $this->_storageClient->setCurrentBatch(null);
         $this->_storageClient = null;
-        unset($this);
+        /*
+          ###
+          PEACHPIE CORE HACK 
+          not allowed anymore starting with php 7.1 & kills peachpie in 0.9.42
+          ###
+        */
+        //unset($this);
+        /* ### */
     }
 
 	/**
