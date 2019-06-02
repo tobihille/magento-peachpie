@@ -2,9 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <Description>Magento CE compiled to .NET by Peachpie</Description>
-
+    <Version>0.0.1-M1.9.4.1</Version>
+    <PackageProjectUrl>https://github.com/tobihille/magento-peachpie</PackageProjectUrl>
+    
     <NoWarn>PHP0181,PHP3012,PHP3007,PHP3010,PHPX0125,PHP3011</NoWarn>
       <!-- PHP0181 Assigning the return value of new by reference is deprecated -->
       <!-- PHP3012 Unreachable code detected -->
