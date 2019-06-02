@@ -319,9 +319,14 @@ abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
         $value = addcslashes($value, "\000\032");
         $this->_connect();
 
-		//CORE HACK FOR PEACHPIE: quote does not add quotes.
+        /* #####
+           CORE HACK PEACHPIE 
+           quote does not add quotes.
+           peachpie issue: #442 (https://github.com/peachpiecompiler/peachpie/issues/442) 
+           ##### */
 		return '"'.str_replace('"', '\"', $value).'"';
         //return $this->_connection->quote($value);
+        /* ##### */
     }
 
     /**
