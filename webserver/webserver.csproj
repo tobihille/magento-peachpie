@@ -10,12 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Peachpie.AspNetCore.Web" Version="0.9.42" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Rewrite" Version="2.2.*" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.*" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.2.*" />
+    <PackageReference Include="Peachpie.AspNetCore.Web" Version="0.9.42"/>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.*"/>
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.*"/>
+    <PackageReference Include="Microsoft.AspNetCore.Rewrite" Version="2.2.*"/>
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.*"/>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.2.*"/>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0"/>
   </ItemGroup>
 
