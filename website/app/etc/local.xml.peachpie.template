@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <install>
+            <date><![CDATA[Mon, 02 Sep 2013 09:48:53 +0000]]></date>
+        </install>
+        <crypt>
+            <key><![CDATA[s3cr3tl33t]]></key>
+        </crypt>
+        <disable_local_modules>false</disable_local_modules>
+        <resources>
+            <db>
+                <table_prefix><![CDATA[]]></table_prefix>
+            </db>
+            <default_setup>
+                <connection>
+                    <host><![CDATA[127.0.0.1]]></host>
+                    <username><![CDATA[root]]></username>
+                    <password><![CDATA[password]]></password>
+                    <dbname><![CDATA[magento_peachpie]]></dbname>
+                    <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+                    <model><![CDATA[mysql4]]></model>
+                    <type><![CDATA[pdo_mysql]]></type>
+                    <pdoType><![CDATA[]]></pdoType>
+                    <active>1</active>
+                    <AllowUserVariables><![CDATA[true]]></AllowUserVariables> <!-- important -->
+                    <charset>utf8</charset>
+                </connection>
+            </default_setup>
+        </resources>
+        <session_save>db</session_save> <!-- prevent session problems due to fileaccess. if db is working, session will work too -->
+    </global>
+</config>
