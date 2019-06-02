@@ -13,6 +13,7 @@
             "externalConsole": false,
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
+            "requireExactSource": false,
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             }
