@@ -7,13 +7,12 @@
             "request": "launch",
             "justMyCode":false,
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/webserver/bin/Debug/netcoreapp2.0/webserver.dll",
+            "program": "${workspaceFolder}/webserver/bin/Debug/netcoreapp2.2/webserver.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "externalConsole": false,
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
-            "requireExactSource": false,
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             }
