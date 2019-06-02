@@ -231,7 +231,13 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
             }
         } catch (PDOException $e) {
             #require_once 'Zend/Db/Statement/Exception.php';
+            /* #####
+               Core Hack PeachPie
+               because '$this->_stmt->queryString' is inaccessible
+               {issue needs to be created}
+               ##### */
             $message = sprintf('%s, no query can be supplied, sorry.', $e->getMessage() /*, $this->_stmt->queryString*/);
+            // #####
             throw new Zend_Db_Statement_Exception($message, (int) $e->getCode(), $e);
         }
     }
