@@ -318,7 +318,10 @@ abstract class Zend_Db_Adapter_Pdo_Abstract extends Zend_Db_Adapter_Abstract
         // Fix for null-byte injection
         $value = addcslashes($value, "\000\032");
         $this->_connect();
-        return $this->_connection->quote($value);
+
+		//CORE HACK FOR PEACHPIE: quote does not add quotes.
+		return '"'.str_replace('"', '\"', $value).'"';
+        //return $this->_connection->quote($value);
     }
 
     /**
