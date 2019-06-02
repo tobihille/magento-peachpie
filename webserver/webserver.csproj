@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\website\magento.msbuildproj" />
+    <ProjectReference Include="..\website\magento.csproj" />
   </ItemGroup>
 
 </Project>
