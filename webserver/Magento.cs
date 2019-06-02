@@ -12,9 +12,17 @@ namespace peachserver
     class Magento {
         static void Main() {
             try {
-                var root = Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()) + 
-                    "/" + 
-                    ConfigurationManager.AppSettings["webserverDir"]; 
+                var root = "";
+                var configuredDir = ConfigurationManager.AppSettings["webserverDir"];
+                if (configuredDir.Contains(":")) //absolute, e.g. C: in path
+                {
+                    root = configuredDir;
+                }
+                else //relative
+                {
+                    root = Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()) +
+                    "/" + configuredDir;
+                }
   
                 var host = new WebHostBuilder()
                     .UseKestrel()
